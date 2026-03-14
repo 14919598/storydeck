@@ -1,0 +1,14 @@
+StoryDeck
+Make long-form content feel alive on mobile.
+
+Most content teams already have words, examples, and key points. The hard part is turning that material into something people actually want to read on a phone.
+
+StoryDeck starts from rough notes and shapes them into a page with rhythm, emphasis, and structure.
+
+- Works for launches, explainers, internal storytelling, and lightweight campaign pages
+- Gives teams a reusable format instead of asking AI to generate a fresh HTML page every time
+- Exports a standalone file that can be shared, archived, or hosted quickly
+
+The first version is intentionally narrow. It focuses on speed, polish, and repeatability instead of trying to become a full website builder.
+
+If the base workflow works, the next wave is easy to imagine: richer modules, stronger themes, and scenario-specific content packs.

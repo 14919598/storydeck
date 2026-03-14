@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "title": "StoryDeck",
+    "subtitle": "A template-driven generator for mobile-first HTML story pages.",
+    "kicker": "JSON Example",
+    "audience": "product builders, creators, internal teams",
+    "cta": "Download standalone HTML"
+  },
+  "sections": [
+    {
+      "type": "intro",
+      "title": "What it solves",
+      "body": "StoryDeck is designed for teams that already know what they want to say but need a faster way to package that message into a polished mobile page."
+    },
+    {
+      "type": "cards",
+      "title": "MVP strengths",
+      "items": [
+        {
+          "title": "Content-first workflow",
+          "body": "Start from notes, Markdown, or JSON instead of hand-coding layouts.",
+          "tag": "workflow"
+        },
+        {
+          "title": "Themeable output",
+          "body": "Switch visual direction without rewriting the underlying story.",
+          "tag": "design"
+        },
+        {
+          "title": "Portable delivery",
+          "body": "Export one standalone HTML file for demos, archives, and static hosting.",
+          "tag": "output"
+        }
+      ]
+    },
+    {
+      "type": "timeline",
+      "title": "Near-term roadmap",
+      "items": [
+        {
+          "label": "Step 1",
+          "title": "Public demo",
+          "body": "Launch a GitHub Pages site with two or three polished sample stories."
+        },
+        {
+          "label": "Step 2",
+          "title": "Template packs",
+          "body": "Add reusable section combinations for launches, explainers, and internal storytelling."
+        },
+        {
+          "label": "Step 3",
+          "title": "Richer modules",
+          "body": "Expand the schema to support image-led blocks, calls to action, and richer transitions."
+        }
+      ]
+    },
+    {
+      "type": "closing",
+      "title": "Why this is worth building",
+      "body": "The biggest opportunity is not one generated page. It is building a repeatable publishing workflow around content that already exists.",
+      "action": "Start with one story, then turn it into a system."
+    }
+  ]
+}
