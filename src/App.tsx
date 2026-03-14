@@ -15,21 +15,21 @@ import {
 } from './lib/story'
 
 const INPUT_MODES: Array<{ id: InputMode; label: string; note: string }> = [
-  { id: 'notes', label: 'Prompt / Notes', note: 'Rough copy, brief, or pasted ideas' },
-  { id: 'markdown', label: 'Markdown', note: 'Structured headings and lists' },
-  { id: 'json', label: 'JSON', note: 'Precise control over sections and metadata' },
+  { id: 'notes', label: '灵感草稿 / Prompt', note: '适合想法、brief、零散文案快速起稿' },
+  { id: 'markdown', label: '结构文稿 / Markdown', note: '适合带标题、列表和章节的内容' },
+  { id: 'json', label: '精确配置 / JSON', note: '适合需要精细控制区块结构的场景' },
 ]
 
 const THEMES: Array<{ id: ThemeId; label: string; blurb: string }> = [
-  { id: 'editorial', label: 'Editorial', blurb: 'Warm, story-led, magazine energy' },
-  { id: 'corporate', label: 'Corporate', blurb: 'Calm, polished, presentation-ready' },
-  { id: 'neon', label: 'Neon', blurb: 'High contrast, launch-page drama' },
+  { id: 'editorial', label: '叙事杂志 / Editorial', blurb: '更温暖、更像专题故事页' },
+  { id: 'corporate', label: '专业简报 / Corporate', blurb: '更克制、更像正式展示材料' },
+  { id: 'neon', label: '高能发布 / Neon', blurb: '对比更强，适合活动和产品发布' },
 ]
 
 const LAYOUTS: Array<{ id: LayoutId; label: string; blurb: string }> = [
-  { id: 'narrative', label: 'Narrative', blurb: 'Chapter-like pacing for story pages' },
-  { id: 'explain', label: 'Explain', blurb: 'Tighter rhythm for walkthroughs and guides' },
-  { id: 'launch', label: 'Launch', blurb: 'More punch for showcase and campaign pages' },
+  { id: 'narrative', label: '故事推进 / Narrative', blurb: '更像分章节讲故事，适合案例和品牌页' },
+  { id: 'explain', label: '讲解说明 / Explain', blurb: '节奏更紧凑，适合教程和功能介绍' },
+  { id: 'launch', label: '发布展示 / Launch', blurb: '冲击力更强，适合活动页和发布页' },
 ]
 
 function App() {
@@ -99,19 +99,19 @@ function App() {
         <div className="panel-header">
           <div>
             <span className="eyebrow">StoryDeck</span>
-            <h1>Build mobile story pages from content, not canvas work.</h1>
+            <h1>让内容直接长成 H5 展示页，而不是从画布重新开始。</h1>
           </div>
           <p>
-            Paste notes, Markdown, or JSON. Then shape the output with a layout,
-            theme, and standalone HTML export.
+            用中文内容也能直接做演示。粘贴草稿、Markdown 或 JSON，再配合结构、主题和独立
+            HTML 导出，把内容更快变成适合手机查看的页面。
           </p>
         </div>
 
         <section className="control-group">
           <div className="section-heading">
-            <span>Starter packs</span>
+            <span>模板库 Starter Packs</span>
             <small>
-              First-wave demo content designed to feel more public, visual, and shareable on GitHub.
+              这批首发模板更偏“能传播、能截图、能拿去发小红书或 GitHub”的公开展示场景。
             </small>
           </div>
           <div className="pack-grid">
@@ -140,8 +140,8 @@ function App() {
 
         <section className="control-group">
           <div className="section-heading">
-            <span>Input mode</span>
-            <small>Switch to a blank example set, or keep shaping the selected starter pack.</small>
+            <span>输入方式 Input Mode</span>
+            <small>你可以切回默认示例，也可以继续在已选模板的基础上微调内容。</small>
           </div>
           <div className="chip-grid">
             {INPUT_MODES.map((mode) => (
@@ -160,8 +160,8 @@ function App() {
 
         <section className="control-group">
           <div className="section-heading">
-            <span>Visual theme</span>
-            <small>Switch the same story between editorial, corporate, and launch-ready looks.</small>
+            <span>视觉主题 Visual Theme</span>
+            <small>同一份内容可以切换不同气质，适配正式汇报、品牌故事或活动宣传。</small>
           </div>
           <div className="chip-grid">
             {THEMES.map((item) => (
@@ -183,8 +183,8 @@ function App() {
 
         <section className="control-group">
           <div className="section-heading">
-            <span>Story skeleton</span>
-            <small>Control the rhythm of the page without changing the source content.</small>
+            <span>页面骨架 Story Skeleton</span>
+            <small>不改原始内容，也能切换讲述节奏，让同一份文案更像案例页、讲解页或发布页。</small>
           </div>
           <div className="chip-grid">
             {LAYOUTS.map((item) => (
@@ -206,10 +206,9 @@ function App() {
 
         <section className="control-group">
           <div className="section-heading">
-            <span>Source content</span>
+            <span>原始内容 Source Content</span>
             <small>
-              The parser is intentionally lightweight in this MVP. JSON gives full control, while
-              notes and Markdown turn rough content into a usable first draft.
+              这个 MVP 故意保持轻量。JSON 适合精细控制，草稿和 Markdown 更适合快速生成第一版。
             </small>
           </div>
           <label className="input-shell" htmlFor="story-input">
@@ -236,10 +235,10 @@ function App() {
         <section className="control-group">
           <div className="action-row">
             <button className="primary-button" onClick={handleDownload} type="button">
-              Download HTML
+              下载 HTML
             </button>
             <button className="secondary-button" onClick={handleCopyHtml} type="button">
-              {copied ? 'Copied HTML' : 'Copy HTML'}
+              {copied ? '已复制 HTML' : '复制 HTML'}
             </button>
             <button
               className="secondary-button"
@@ -250,17 +249,17 @@ function App() {
               }}
               type="button"
             >
-              Reset content
+              重置内容
             </button>
           </div>
           <div className="footnote-grid">
             <p>
-              Strongest public demos right now:
-              <strong> Indie Launch, Event Drop, and Case Study.</strong>
+              当前最适合公开传播的展示页：
+              <strong> 产品发布、活动海报、案例拆解。</strong>
             </p>
             <p>
-              First extension idea:
-              <strong> turn these starter packs into importable template packs with screenshots.</strong>
+              下一步最值得做的增强：
+              <strong> 把这些模板做成可导入的素材包，并补上截图与封面图。</strong>
             </p>
           </div>
         </section>
@@ -269,7 +268,7 @@ function App() {
       <main className="preview-column">
         <div className="preview-header">
           <div>
-            <span className="eyebrow">Live preview</span>
+            <span className="eyebrow">实时预览 Live Preview</span>
             <h2>{story.meta.title}</h2>
           </div>
           <p>{story.meta.subtitle}</p>
@@ -277,8 +276,8 @@ function App() {
 
         <section className="showcase-strip">
           <div className="showcase-heading">
-            <span className="eyebrow">Showcase Lineup</span>
-            <p>These are the strongest first screenshots for the repo homepage and social previews.</p>
+            <span className="eyebrow">展示推荐 Showcase</span>
+            <p>这几组是目前最适合放在仓库首页、社交封面和小红书首图里的版本。</p>
           </div>
           <div className="showcase-grid">
             {FEATURED_PACKS.map((pack) => (
@@ -321,28 +320,27 @@ function App() {
 
           <div className="preview-notes">
             <div className="preview-card">
-              <span>Selected angle</span>
-              <strong>{selectedPack?.name ?? 'Custom remix'}</strong>
-              <p>{selectedPack?.tagline ?? 'You are now mixing your own content, layout, and theme outside the starter presets.'}</p>
+              <span>当前方向 Selected Angle</span>
+              <strong>{selectedPack?.name ?? '自定义版本 / Custom Remix'}</strong>
+              <p>{selectedPack?.tagline ?? '你现在正在模板库之外，自由组合自己的内容、结构和主题。'}</p>
             </div>
             <div className="preview-card">
-              <span>Share angle</span>
-              <strong>{selectedPack?.screenshotLabel ?? 'Custom output'}</strong>
-              <p>{selectedPack?.useCase ?? 'Use this view to capture a custom screenshot or build a one-off export.'}</p>
+              <span>传播角度 Share Angle</span>
+              <strong>{selectedPack?.screenshotLabel ?? '自定义输出 / Custom Output'}</strong>
+              <p>{selectedPack?.useCase ?? '这个视图适合截成封面图，或者直接导出成一次性的独立展示页。'}</p>
             </div>
             <div className="preview-card">
-              <span>Rendering strategy</span>
-              <strong>Template skeleton + content modules + theme tokens</strong>
+              <span>生成策略 Rendering Strategy</span>
+              <strong>模板骨架 + 内容模块 + 主题 Token</strong>
               <p>
-                This keeps the project flexible without falling into fully freeform page building.
+                这样既能保证变化，又不会掉进完全自由排版导致的混乱和低复用。
               </p>
             </div>
             <div className="preview-card">
-              <span>Why it matters</span>
-              <strong>AI can draft content. StoryDeck turns it into a reusable system.</strong>
+              <span>为什么值得做 Why It Matters</span>
+              <strong>AI 可以帮你起稿，StoryDeck 更像把它变成可持续复用的展示系统。</strong>
               <p>
-                The value is not just one nice page. It is repeatable production with consistent
-                structure and export quality.
+                价值不只是“临时生成一页”，而是让团队长期产出时也能保持结构稳定、风格统一和导出质量。
               </p>
             </div>
           </div>
@@ -357,7 +355,7 @@ function StorySectionView({ section }: { section: StorySection }) {
     case 'intro':
       return (
         <section className="story-section story-section-intro">
-          <span className="section-label">Overview</span>
+          <span className="section-label">导览 Overview</span>
           <h4>{section.title}</h4>
           <Prose text={section.body} />
         </section>
@@ -365,7 +363,7 @@ function StorySectionView({ section }: { section: StorySection }) {
     case 'cards':
       return (
         <section className="story-section story-section-cards">
-          <span className="section-label">Highlights</span>
+          <span className="section-label">亮点 Highlights</span>
           <h4>{section.title}</h4>
           <div className="card-grid">
             {section.items.map((item) => (
@@ -381,7 +379,7 @@ function StorySectionView({ section }: { section: StorySection }) {
     case 'timeline':
       return (
         <section className="story-section story-section-timeline">
-          <span className="section-label">Flow</span>
+          <span className="section-label">流程 Flow</span>
           <h4>{section.title}</h4>
           <div className="timeline-list">
             {section.items.map((item) => (
@@ -407,7 +405,7 @@ function StorySectionView({ section }: { section: StorySection }) {
     case 'checklist':
       return (
         <section className="story-section story-section-checklist">
-          <span className="section-label">Checklist</span>
+          <span className="section-label">清单 Checklist</span>
           <h4>{section.title}</h4>
           <ul className="checklist">
             {section.items.map((item) => (
@@ -419,7 +417,7 @@ function StorySectionView({ section }: { section: StorySection }) {
     case 'stats':
       return (
         <section className="story-section story-section-stats">
-          <span className="section-label">Signals</span>
+          <span className="section-label">信号 Signals</span>
           <h4>{section.title}</h4>
           <div className="stat-grid">
             {section.items.map((item) => (
@@ -435,7 +433,7 @@ function StorySectionView({ section }: { section: StorySection }) {
     case 'closing':
       return (
         <section className="story-section story-section-closing">
-          <span className="section-label">Wrap-up</span>
+          <span className="section-label">收束 Wrap-up</span>
           <h4>{section.title}</h4>
           <Prose text={section.body} />
           {section.action ? <div className="closing-action">{section.action}</div> : null}

@@ -70,116 +70,116 @@ export interface ParseResult {
 
 export const EXAMPLE_INPUTS: Record<InputMode, string> = {
   notes: `StoryDeck
-AI-ready mobile story pages for launches, explainers, and internal storytelling.
+把 Markdown、JSON 和提示词，更快变成适合手机浏览的 H5 展示页。
 
-StoryDeck turns rough notes, markdown, or structured JSON into polished H5 story pages that are ready to preview on mobile and export as a single HTML file.
+StoryDeck 想解决的不是“AI 能不能生成一页 HTML”，而是“内容能不能被稳定地整理成可复用的展示页系统”。
 
-Teams often already have the content. What slows them down is layout work, styling, and turning long-form text into something people actually want to read on a phone.
+很多团队其实并不缺内容，缺的是把内容整理成一页愿意被别人看完、也方便持续复用的方式。
 
-- Works for launch pages, tutorials, campaign stories, and internal communications
-- Gives every story a consistent structure instead of relying on one-off AI HTML output
-- Exports a standalone file that can be shared, archived, or deployed anywhere
+- 适合产品发布、活动宣传、案例拆解和内部沟通
+- 比一次性的 AI 生成结果更稳定，更容易保持统一风格
+- 可以导出独立 HTML，方便直接发链接、归档或部署
 
-In the first version, the focus is speed: choose a layout, tune a theme, paste your content, and publish a story page in minutes.
+第一版的重点是速度：选模板、换主题、贴内容，然后几分钟内做出一页能发的 H5 页面。
 
-The most useful next step is adding reusable section templates so one team can produce a whole series with the same voice.`,
+后面最值得继续做的，就是把不同场景沉淀成可重复使用的模板包。`,
   markdown: `Title: StoryDeck
-Subtitle: Turn Markdown, JSON, or rough prompts into polished H5 story pages.
-Kicker: Mobile Story Generator
-Audience: builders, creators, and internal content teams
-CTA: Export standalone HTML
+Subtitle: 把 Markdown、JSON 或提示词，整理成更适合手机传播的 H5 展示页。
+Kicker: 内容转 H5 / Story Generator
+Audience: 产品团队、内容团队、创作者与内部沟通场景
+CTA: 导出独立 HTML
 
-## Why now
-Most teams already have the content they need. The bottleneck is transforming that content into a mobile-first page that feels polished, readable, and easy to share.
+## 为什么值得做
+现在很多 AI 都能生成 HTML，但问题在于它经常是一页一页临时起稿，结构不稳定，也很难持续复用。真正有价值的，是把内容变成长期可用的页面工作流。
 
-## What makes it useful
-- Structured generation: Start from a repeatable story arc instead of a blank canvas.
-- Themeable output: Switch between editorial, corporate, and neon looks without rewriting content.
-- Portable delivery: Export a single HTML file for GitHub Pages, demos, and internal sharing.
+## 它解决了什么
+- 结构更稳定：从模板骨架开始，而不是从空白页面开始。
+- 主题可切换：同一份内容可以切成叙事、正式或高能发布风格。
+- 导出更方便：一键生成独立 HTML，适合 GitHub Pages、内网或活动传播。
 
-## Build flow
-- Draft | Paste notes, Markdown, or JSON into the editor.
-- Shape | Choose the layout, theme, and section rhythm.
-- Publish | Export an HTML page and share it anywhere.
+## 使用流程
+- 起稿 | 粘贴草稿、Markdown 或 JSON。
+- 成型 | 选择页面骨架和主题。
+- 发布 | 导出 HTML，发链接或继续部署。
 
-## Signals
-- Preview speed: Instant updates in a mobile frame.
-- Output quality: Designed for storytelling instead of plain document rendering.
-- Reuse value: The same engine can support launches, explainers, tutorials, and internal comms.
+## 信号
+- 预览更直观：手机框里实时看到结果。
+- 展示更友好：不是文档渲染，而是更像内容展示页。
+- 可复用性更强：同一套引擎能覆盖发布、讲解、案例和内部沟通。
 
 ## Quote
-> AI can help write the content. StoryDeck makes the output reusable.
+> AI 可以帮你起稿，StoryDeck 更像把内容变成可持续复用的展示系统。
 
-## Launch checklist
-- Define the first three public-facing themes.
-- Add two story skeletons tuned for launches and explainers.
-- Ship a starter demo on GitHub Pages.`,
+## 首发清单
+- 先把公开展示最强的三套主题做扎实。
+- 把发布页、说明页、案例页做成可切换模板。
+- 用 GitHub Pages 放出一个可直接体验的 demo。`,
   json: `{
   "meta": {
     "title": "StoryDeck",
-    "subtitle": "A template-driven generator for mobile-first HTML story pages.",
-    "kicker": "Structured H5 Builder",
-    "audience": "product builders, creators, internal teams",
-    "cta": "Download HTML"
+    "subtitle": "一个把内容整理成移动端 H5 展示页的模板化生成器。",
+    "kicker": "结构化 H5 生成器",
+    "audience": "产品团队、内容团队、创作者",
+    "cta": "下载 HTML"
   },
   "sections": [
     {
       "type": "intro",
-      "title": "Why it matters",
-      "body": "Good content is everywhere. Good mobile presentation is not. StoryDeck makes long-form content feel intentional, readable, and ready to share."
+      "title": "为什么它值得做",
+      "body": "好内容并不少，缺的是一种更稳定的移动端表达方式。StoryDeck 想做的是让长内容看起来更有设计感，也更方便传播。"
     },
     {
       "type": "cards",
-      "title": "Core strengths",
+      "title": "核心优势",
       "items": [
         {
-          "title": "Repeatable structure",
-          "body": "Use story skeletons instead of re-prompting a model for every new page.",
-          "tag": "system"
+          "title": "结构可复用",
+          "body": "不需要每次重新让模型生成整页 HTML，而是从可重复使用的页面骨架开始。",
+          "tag": "system / 系统"
         },
         {
-          "title": "Fast customization",
-          "body": "Swap themes and layout styles without touching the source content.",
-          "tag": "design"
+          "title": "换风格更快",
+          "body": "同一份内容可以直接切换主题和页面节奏，不用重写原文。",
+          "tag": "design / 设计"
         },
         {
-          "title": "Portable output",
-          "body": "Export a single HTML file that works across demos, static hosting, and internal delivery.",
-          "tag": "delivery"
+          "title": "导出更方便",
+          "body": "一份独立 HTML 就能覆盖演示、静态托管和内部传播场景。",
+          "tag": "delivery / 交付"
         }
       ]
     },
     {
       "type": "timeline",
-      "title": "MVP roadmap",
+      "title": "MVP 路线",
       "items": [
         {
-          "label": "Phase 1",
-          "title": "Input and preview",
-          "body": "Support notes, markdown, and JSON with an instant mobile preview."
+          "label": "阶段 1",
+          "title": "输入与预览",
+          "body": "支持草稿、Markdown 和 JSON，并提供即时移动端预览。"
         },
         {
-          "label": "Phase 2",
-          "title": "Themes and layouts",
-          "body": "Create visual systems that make the same content feel editorial, corporate, or launch-ready."
+          "label": "阶段 2",
+          "title": "主题与结构",
+          "body": "让同一份内容在叙事风、正式风和发布风之间切换。"
         },
         {
-          "label": "Phase 3",
-          "title": "Export and publish",
-          "body": "Generate a standalone HTML file that is easy to share or deploy."
+          "label": "阶段 3",
+          "title": "导出与发布",
+          "body": "生成独立 HTML，方便直接分享或部署。"
         }
       ]
     },
     {
       "type": "quote",
-      "quote": "The real value is not generating one nice page. It is building a workflow that can keep producing them.",
-      "caption": "Project principle"
+      "quote": "真正的价值不是临时生成一页好看的页面，而是建立一个可以持续产出的展示工作流。",
+      "caption": "项目原则 / Project Principle"
     },
     {
       "type": "closing",
-      "title": "What comes next",
-      "body": "The next iteration can add richer blocks, reusable templates, and shareable theme packs for specific use cases.",
-      "action": "Start with one story. Turn it into a repeatable system."
+      "title": "下一步做什么",
+      "body": "接下来可以继续增加更丰富的区块、可复用模板，以及针对不同场景的主题包。",
+      "action": "先把一页内容做出来，再把它变成一套方法。"
     }
   ]
 }`,
@@ -188,36 +188,36 @@ Most teams already have the content they need. The bottleneck is transforming th
 const FALLBACK_STORY: StoryDocument = {
   meta: {
     title: 'StoryDeck',
-    subtitle: 'Turn content into polished mobile story pages.',
-    kicker: 'Mobile Story Generator',
-    audience: 'builders and content teams',
-    cta: 'Export HTML',
+    subtitle: '把内容更快整理成适合手机浏览的展示页。',
+    kicker: '内容转 H5 / Story Generator',
+    audience: '产品团队与内容团队',
+    cta: '导出 HTML',
   },
   sections: [
     {
       type: 'intro',
-      title: 'Start with structure',
+      title: '先从结构开始',
       body:
-        'Paste rough notes, structured Markdown, or JSON, then shape the result with a layout and theme built for mobile reading.',
+        '把草稿、Markdown 或 JSON 粘进来，再用页面骨架和主题把它整理成更适合手机阅读的展示页。',
     },
     {
       type: 'cards',
-      title: 'What the MVP already does',
+      title: '这个 MVP 现在已经能做什么',
       items: [
         {
-          title: 'Flexible input',
-          body: 'Support notes, Markdown, and JSON from the same editor surface.',
-          tag: 'input',
+          title: '输入更灵活',
+          body: '同一个界面里就支持草稿、Markdown 和 JSON 三种内容来源。',
+          tag: 'input / 输入',
         },
         {
-          title: 'Theme switching',
-          body: 'Change visual direction without rebuilding the content.',
-          tag: 'theme',
+          title: '主题可切换',
+          body: '不改原文，也能切换不同视觉方向和展示风格。',
+          tag: 'theme / 主题',
         },
         {
-          title: 'Standalone export',
-          body: 'Generate one HTML file that can travel anywhere.',
-          tag: 'output',
+          title: '导出更轻量',
+          body: '直接生成一份 HTML，就可以在不同场景里流转。',
+          tag: 'output / 导出',
         },
       ],
     },
@@ -301,10 +301,10 @@ export function parseStoryInput(mode: InputMode, input: string): ParseResult {
         return parseNotesInput(input)
     }
   } catch (error) {
-    const message = error instanceof Error ? error.message : 'Unknown parsing error'
+    const message = error instanceof Error ? error.message : '未知解析错误'
     return {
       story: FALLBACK_STORY,
-      warnings: [`Using fallback content because parsing failed: ${message}`],
+      warnings: [`解析失败，已自动切回默认示例内容：${message}`],
     }
   }
 }
@@ -335,10 +335,10 @@ function parseMarkdownInput(input: string): ParseResult {
     title: readMeta(metaLines, 'title') ?? firstNonEmptyLine(lines) ?? FALLBACK_STORY.meta.title,
     subtitle:
       readMeta(metaLines, 'subtitle') ??
-      'A mobile-first story page generated from structured Markdown.',
-    kicker: readMeta(metaLines, 'kicker') ?? 'Structured Markdown',
+      '一页根据 Markdown 自动整理出来的移动端展示页。',
+    kicker: readMeta(metaLines, 'kicker') ?? '结构文稿 / Markdown',
     audience: readMeta(metaLines, 'audience') ?? '',
-    cta: readMeta(metaLines, 'cta') ?? 'Export HTML',
+    cta: readMeta(metaLines, 'cta') ?? '导出 HTML',
   }
 
   const content = lines.slice(firstHeadingIndex).join('\n').trim()
@@ -359,7 +359,7 @@ function parseMarkdownInput(input: string): ParseResult {
       sections.push({
         type: 'quote',
         quote: quoteLines.join(' ') || stripMarkdown(body),
-        caption: title.toLowerCase().includes('quote') ? 'Quote block' : title,
+        caption: title.toLowerCase().includes('quote') ? '引用 / Quote' : title,
       })
       return
     }
@@ -371,8 +371,8 @@ function parseMarkdownInput(input: string): ParseResult {
         items: listItems.map((item, itemIndex) => {
           const [left, middle, right] = splitItemParts(item)
           return {
-            label: left || `Step ${itemIndex + 1}`,
-            title: middle || left || `Step ${itemIndex + 1}`,
+            label: left || `步骤 ${itemIndex + 1}`,
+            title: middle || left || `步骤 ${itemIndex + 1}`,
             body: right || middle || left || item,
           }
         }),
@@ -387,8 +387,8 @@ function parseMarkdownInput(input: string): ParseResult {
         items: listItems.map((item) => {
           const [label, value, detail] = splitItemParts(item)
           return {
-            label: label || 'Signal',
-            value: value || label || 'Key point',
+            label: label || '信号',
+            value: value || label || '重点',
             detail: detail || '',
           }
         }),
@@ -412,7 +412,7 @@ function parseMarkdownInput(input: string): ParseResult {
         items: listItems.map((item) => {
           const [itemTitle, itemBody, tag] = splitItemParts(item)
           return {
-            title: itemTitle || 'Key point',
+            title: itemTitle || '重点',
             body: itemBody || itemTitle || item,
             tag,
           }
@@ -431,10 +431,10 @@ function parseMarkdownInput(input: string): ParseResult {
   })
 
   if (sections.length === 0) {
-    warnings.push('No section headings found. A simple intro block was generated instead.')
+    warnings.push('没有识别到章节标题，已自动生成一个简版导览区块。')
     sections.push({
       type: 'intro',
-      title: 'Overview',
+      title: '导览',
       body: stripMarkdown(content),
     })
   }
@@ -451,13 +451,13 @@ function parseNotesInput(input: string): ParseResult {
     .filter(Boolean)
 
   if (paragraphs.length === 0) {
-    warnings.push('The notes field was empty. Example content is being used.')
+    warnings.push('草稿输入为空，已自动载入默认示例内容。')
     return { story: FALLBACK_STORY, warnings }
   }
 
   const firstParagraphLines = paragraphs[0].split('\n').map((line) => line.trim()).filter(Boolean)
   const explicitTitleLine = firstParagraphLines.find((line) => !line.startsWith('-') && line.length <= 72)
-  const title = explicitTitleLine?.replace(/^#\s*/, '') ?? 'Untitled Story'
+  const title = explicitTitleLine?.replace(/^#\s*/, '') ?? '未命名故事页'
   const subtitleSource =
     paragraphs.find((paragraph, index) => index > 0 && !paragraph.includes('- ')) ?? paragraphs[0]
 
@@ -480,17 +480,17 @@ function parseNotesInput(input: string): ParseResult {
   const fallbackIntroBody =
     FALLBACK_STORY.sections[0].type === 'intro'
       ? FALLBACK_STORY.sections[0].body
-      : 'Start with one clear overview paragraph.'
+      : '先写一段足够清楚的开场导语。'
   const introBody = proseParagraphs[1] ?? proseParagraphs[0] ?? fallbackIntroBody
   const midParagraphs = proseParagraphs.slice(2, 5)
   const closingBody =
-    proseParagraphs[proseParagraphs.length - 1] ?? 'Add a closing note to guide the next reader action.'
-  const quoteSource = findQuoteCandidate(proseParagraphs) ?? 'Shape one strong idea and let the page carry it.'
+    proseParagraphs[proseParagraphs.length - 1] ?? '补一段结尾提醒，告诉读者下一步要做什么。'
+  const quoteSource = findQuoteCandidate(proseParagraphs) ?? '先抓住一个最强的观点，再让页面去放大它。'
 
   const sections: StorySection[] = [
     {
       type: 'intro',
-      title: 'Story overview',
+      title: '内容导览',
       body: introBody,
     },
   ]
@@ -498,11 +498,11 @@ function parseNotesInput(input: string): ParseResult {
   if (midParagraphs.length > 0) {
     sections.push({
       type: 'cards',
-      title: 'Why this story works',
+      title: '这页内容为什么成立',
       items: midParagraphs.map((paragraph, index) => ({
         title: sentenceToTitle(paragraph, index),
         body: paragraph,
-        tag: index === 0 ? 'focus' : undefined,
+        tag: index === 0 ? 'focus / 重点' : undefined,
       })),
     })
   }
@@ -510,13 +510,13 @@ function parseNotesInput(input: string): ParseResult {
   if (bulletItems.length > 0) {
     sections.push({
       type: bulletItems.every((item) => item.includes(':')) ? 'stats' : 'checklist',
-      title: bulletItems.every((item) => item.includes(':')) ? 'Signals' : 'Build checklist',
+      title: bulletItems.every((item) => item.includes(':')) ? '关键信号' : '制作清单',
       items: bulletItems.every((item) => item.includes(':'))
         ? bulletItems.map((item) => {
             const [label, value, detail] = splitItemParts(item)
             return {
-              label: label || 'Signal',
-              value: value || 'Value',
+              label: label || '信号',
+              value: value || '数值',
               detail,
             }
           })
@@ -541,9 +541,9 @@ function parseNotesInput(input: string): ParseResult {
     meta: {
       title,
       subtitle: subtitleSource.replace(/^#\s*/, ''),
-      kicker: 'Prompt / Notes',
-      audience: 'teams shipping content quickly',
-      cta: 'Export HTML',
+      kicker: '草稿输入 / Prompt',
+      audience: '需要快速出页的团队',
+      cta: '导出 HTML',
     },
     sections,
   })
@@ -657,7 +657,7 @@ function sentenceToTitle(paragraph: string, index: number) {
   if (firstSentence.length > 0 && firstSentence.length <= 42) {
     return firstSentence
   }
-  return `Story point ${index + 1}`
+  return `要点 ${index + 1}`
 }
 
 function findQuoteCandidate(paragraphs: string[]) {
@@ -682,16 +682,16 @@ function paragraphsToHtml(text: string) {
 function renderSectionHtml(section: StorySection) {
   switch (section.type) {
     case 'intro':
-      return `<section class="story-section intro"><div class="section-label">Overview</div><h2>${escapeHtml(section.title)}</h2><div class="prose">${paragraphsToHtml(section.body)}</div></section>`
+      return `<section class="story-section intro"><div class="section-label">导览 Overview</div><h2>${escapeHtml(section.title)}</h2><div class="prose">${paragraphsToHtml(section.body)}</div></section>`
     case 'cards':
-      return `<section class="story-section cards"><div class="section-label">Highlights</div><h2>${escapeHtml(section.title)}</h2><div class="card-grid">${section.items
+      return `<section class="story-section cards"><div class="section-label">亮点 Highlights</div><h2>${escapeHtml(section.title)}</h2><div class="card-grid">${section.items
         .map(
           (item) =>
             `<article class="story-card"><div class="card-top">${item.tag ? `<span class="mini-tag">${escapeHtml(item.tag)}</span>` : ''}</div><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.body)}</p></article>`,
         )
         .join('')}</div></section>`
     case 'timeline':
-      return `<section class="story-section timeline"><div class="section-label">Flow</div><h2>${escapeHtml(section.title)}</h2><div class="timeline-list">${section.items
+      return `<section class="story-section timeline"><div class="section-label">流程 Flow</div><h2>${escapeHtml(section.title)}</h2><div class="timeline-list">${section.items
         .map(
           (item) =>
             `<article class="timeline-item"><div class="timeline-dot"></div><div class="timeline-copy"><span class="timeline-label">${escapeHtml(item.label)}</span><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.body)}</p></div></article>`,
@@ -700,18 +700,18 @@ function renderSectionHtml(section: StorySection) {
     case 'quote':
       return `<section class="story-section quote"><blockquote>${escapeHtml(section.quote)}</blockquote>${section.caption ? `<p class="quote-caption">${escapeHtml(section.caption)}</p>` : ''}</section>`
     case 'checklist':
-      return `<section class="story-section checklist"><div class="section-label">Checklist</div><h2>${escapeHtml(section.title)}</h2><ul class="checklist">${section.items
+      return `<section class="story-section checklist"><div class="section-label">清单 Checklist</div><h2>${escapeHtml(section.title)}</h2><ul class="checklist">${section.items
         .map((item) => `<li>${escapeHtml(item)}</li>`)
         .join('')}</ul></section>`
     case 'stats':
-      return `<section class="story-section stats"><div class="section-label">Signals</div><h2>${escapeHtml(section.title)}</h2><div class="stat-grid">${section.items
+      return `<section class="story-section stats"><div class="section-label">信号 Signals</div><h2>${escapeHtml(section.title)}</h2><div class="stat-grid">${section.items
         .map(
           (item) =>
             `<article class="stat-card"><span>${escapeHtml(item.label)}</span><strong>${escapeHtml(item.value)}</strong>${item.detail ? `<p>${escapeHtml(item.detail)}</p>` : ''}</article>`,
         )
         .join('')}</div></section>`
     case 'closing':
-      return `<section class="story-section closing"><div class="section-label">Wrap-up</div><h2>${escapeHtml(section.title)}</h2><div class="prose">${paragraphsToHtml(section.body)}</div>${section.action ? `<div class="closing-action">${escapeHtml(section.action)}</div>` : ''}</section>`
+      return `<section class="story-section closing"><div class="section-label">收束 Wrap-up</div><h2>${escapeHtml(section.title)}</h2><div class="prose">${paragraphsToHtml(section.body)}</div>${section.action ? `<div class="closing-action">${escapeHtml(section.action)}</div>` : ''}</section>`
   }
 }
 
@@ -996,7 +996,7 @@ export function buildStoryHtml(story: StoryDocument, theme: ThemeId, layout: Lay
   const cta = story.meta.cta ? `<span class="meta-pill">${escapeHtml(story.meta.cta)}</span>` : ''
 
   return `<!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
