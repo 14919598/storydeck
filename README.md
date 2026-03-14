@@ -2,7 +2,11 @@
 
 Template-driven H5 story pages from Markdown, JSON, or rough prompts.
 
-StoryDeck is a mobile-first story page generator for turning content into polished HTML experiences without hand-building layouts every time. It is designed for launches, explainers, tutorials, campaign pages, internal communications, and any other format where a long document needs to become a readable mobile page.
+Live Demo: https://14919598.github.io/storydeck/
+
+StoryDeck turns content into polished mobile-first H5 story pages without hand-building layouts every time. It is designed for launches, explainers, tutorials, campaign pages, case studies, creator pages, and internal communications.
+
+AI can already generate HTML. StoryDeck focuses on the part that is still messy: making the output structured, reusable, previewable on mobile, and easy to export as a standalone page.
 
 The first version is intentionally focused:
 
